@@ -1,6 +1,7 @@
-from django.urls import path
-from . import views
+from django.conf.urls import url, include
+from blog.resources import PostResource
 
+note_resource = PostResource()
 urlpatterns = [
-    path('', views.post_list, name='post_list')
+    url(r'^api/', include(note_resource.urls)),
 ]

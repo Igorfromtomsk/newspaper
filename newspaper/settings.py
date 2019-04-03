@@ -24,18 +24,18 @@ SECRET_KEY = 'm=16so5pt&!dt#xk0ekx(qem39^9s*rwepl+5@*%gwuef&)z!m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'LOCALHOST', '127.0.0.1', 'localhost']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'tastypie',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'newspaper',
     'blog'
 ]
@@ -122,4 +122,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+REACT_APP_DIR = os.path.join(BASE_DIR, 'front')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'build/static')
+
+STATICFILES_DIRS = [
+    os.path.join(REACT_APP_DIR, 'build/static'),
+]
