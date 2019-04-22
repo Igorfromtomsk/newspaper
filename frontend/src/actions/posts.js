@@ -1,4 +1,4 @@
-import * as Actions from '../actionTypes/posts';
+import * as Actions from '../constants/posts';
 
 export function getPostById(postId) {
   return {

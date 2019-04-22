@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {getPostById} from "../../actions/posts";
+import S from './styles.module.css';
 
 class SinglePostPageComponent extends Component {
   componentDidMount() {
@@ -10,10 +11,12 @@ class SinglePostPageComponent extends Component {
   render() {
     const {post} = this.props;
     return (
-      <>
-        <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{__html: post.text}} />
-      </>
+      <div className={S.singlePost}>
+        <div className={S.caver}>
+          <h1>{post.title}</h1>
+        </div>
+        <div className={S.postContainer} dangerouslySetInnerHTML={{__html: post.text}} />
+      </div>
     )
   }
 }

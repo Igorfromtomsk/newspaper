@@ -1,0 +1,31 @@
+$linkColor: #363636
+
+
+.menu
+  border-bottom: 1px solid #eee
+  width: 100%
+  display: flex
+  align-items: center
+  background-color: white
+  height: 60px
+  padding: 0px 15px
+  margin: 0px -10px
+  box-sizing: border-box
+
+  ul
+    margin: 0
+    padding: 0
+    display: flex
+    list-style: none
+    align-items: center
+
+    li
+      margin: 0 10px
+
+  &Link
+    color: $linkColor
+    text-decoration: none
+    transition: ease .15s
+
+    &:hover
+      color: rgba($linkColor, .5)
