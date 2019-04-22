@@ -1,0 +1,24 @@
+.menu {
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 60px;
+  padding: 0px 15px;
+  margin: 0px -10px;
+  box-sizing: border-box; }
+  .menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center; }
+    .menu ul li {
+      margin: 0 10px; }
+  .menuLink {
+    color: #363636;
+    text-decoration: none;
+    transition: ease .15s; }
+    .menuLink:hover {
+      color: rgba(54, 54, 54, 0.5); }
