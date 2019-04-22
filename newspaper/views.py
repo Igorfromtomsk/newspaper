@@ -7,6 +7,7 @@ from django.conf import settings
 class FrontendAppView(TemplateView):
 
     def get(self, request):
+        print(settings.REACT_APP_DIR)
         try:
             with open(os.path.join(settings.REACT_APP_DIR, 'index.html')) as f:
                 return HttpResponse(f.read())
