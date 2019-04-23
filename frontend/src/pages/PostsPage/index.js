@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 class PostsPageComponent extends Component {
   componentDidMount() {
+    document.title = `${this.props.title} | Posts`;
   }
 
   render() {
@@ -32,7 +33,8 @@ class PostsPageComponent extends Component {
 
 const mapProps = state => {
   return {
-    posts: state.PostsReducer.objects
+    posts: state.PostsReducer.objects,
+    pageTitle: state.GeneralReducer.title
   }
 };
 const mapAction = {};

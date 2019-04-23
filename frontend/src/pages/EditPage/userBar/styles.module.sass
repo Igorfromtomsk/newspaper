@@ -1,0 +1,24 @@
+.userBar
+  width: calc(3rem - 6px)
+  box-sizing: border-box
+  margin-top: 3px
+  padding: calc(.5rem - 3px)
+  position: fixed
+  left: 0
+  top: calc(60px + 3rem)
+  height: calc(100% - 60px - 3rem - 6px)
+  z-index: 1
+
+  & *
+    position: relative
+    z-index: 1
+
+  &:after
+    content: ''
+    height: 100%
+    width: calc(100% + 6px)
+    background-color: white
+    position: absolute
+    left: 0
+    top: 0
+    border-right: 1px solid #bbb

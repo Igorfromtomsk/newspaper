@@ -18,6 +18,9 @@ export default class Menu extends Component {
             <li>
               <Link className={S.menuLink} to="/posts/">All Posts</Link>
             </li>
+            <li>
+              <Link className={S.menuLink} to="/editor">Editor</Link>
+            </li>
           </ul>
         </nav>
       </div>

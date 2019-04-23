@@ -13,6 +13,9 @@ import S from './App.module.css';
 import SinglePostPage from "./pages/SinglePostPage";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
+import EditPage from "./pages/EditPage";
+
+import classNames from 'classnames';
 
 const store = createStore(MasterReducer);
 
@@ -21,13 +24,14 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div className={S.mainWrapper} style={{'min-height': '100%'}}>
+          <div className={classNames(S.mainWrapper)} style={{minHeight: '100%'}}>
             <Menu/>
-            <div className={S.container} style={{'flex-grow': '2'}}>
+            <div className={classNames(S.container, S.mainContainer, S.fGrow, S.dFlex, S.dColumn)}>
               <Route path="/" exact component={IndexPage}/>
               <Route path="/about/" component={AboutPage}/>
               <Route path="/posts/" component={PostsPage}/>
               <Route path="/post/:id" component={SinglePostPage}/>
+              <Route path="/editor" component={EditPage}/>
             </div>
             <Footer/>
           </div>
