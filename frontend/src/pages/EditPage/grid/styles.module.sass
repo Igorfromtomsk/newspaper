@@ -1,5 +1,8 @@
+@import "../../../_styles/variables.sass"
+@import "../../../_styles/styles.module.sass"
+
+
 .grid
-  background-color: rgba(red, .1)
   position: absolute
   left: 0
   top: 0
@@ -11,5 +14,13 @@
 
 .column
   height: 100%
-  background-color: rgba(red, .2)
   flex-grow: 2
+
+
+.guide
+  height: 100%
+  width: 0
+  border-left: 1px solid rgba($mainColor, .7)
+
+  &.guideBetweenColumns
+    opacity: .5

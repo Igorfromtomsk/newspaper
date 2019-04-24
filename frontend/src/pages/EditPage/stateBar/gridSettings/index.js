@@ -2,13 +2,10 @@ import React, {Component} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Popover, OverlayTrigger, Button, Form} from 'react-bootstrap';
 import Checkbox from '../../../../components/_shared/checkbox';
+import {bindActionCreators} from 'redux';
 
 
-import {
-  toggleGridVisibility,
-  changeColumnsAmount,
-  changeColumnsOffset
-} from "../../../../actions/editor/gridSettings";
+import * as GridSettingsActions from "../../../../actions/editor/gridSettings";
 import {connect} from "react-redux";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -20,62 +17,128 @@ class GridSettingsComp extends Component {
 
     this.colAmountInput = React.createRef();
     this.colOffsetInput = React.createRef();
+    this.leftPaddingInput = React.createRef();
+    this.rightPaddingInput = React.createRef();
   }
 
   changeColumnsAmount(e) {
-    if (+e.target.value < 1) {
-      this.colAmountInput.current.value = 1;
-    } else {
-      this.props.changeColumnsAmount(+e.target.value);
-    }
+    this.props.changeColumnsAmount(+e.target.value);
   }
 
   changeColumnsOffset(e) {
     this.props.changeColumnsOffset(+e.target.value);
   }
 
+  changeBothOffsets(e) {
+    this.props.changeLeftPadding(+e.target.value);
+    this.props.changeRightPadding(+e.target.value);
+  }
+
+  changeLeftPadding(e) {
+    this.props.changeLeftPadding(+e.target.value);
+  }
+
+  changeRightPadding(e) {
+    this.props.changeRightPadding(+e.target.value);
+  }
+
   render() {
-    const {gridIsHidden, columnsAmount, columnsOffset} = this.props;
+    const {
+      gridIsHidden,
+      columnsAmount,
+      columnsOffset,
+      leftPadding, rightPadding,
+      samePadding
+    } = this.props;
+
+    const leftColumn = 7;
+    const rightColumn = 5;
+
     const popover = (
-      <Popover id="popover-basic" title="Grid settings">
+      <Popover id="popover-basic" title="Grid settings" className={['large-popover', 'grid-settings']}>
         <Form>
-          <Form.Group as={Row}>
-            <Form.Label column sm={8}>Show grid</Form.Label>
-            <Col sm={4}>
-              <Checkbox
-                style={{'marginTop': '0.4rem'}}
-                checked={!gridIsHidden}
-                onChange={this.props.toggleGridVisibility}
-              />
+          <Row>
+            <Col sm={6}>
+              <Form.Group as={Row}>
+                <Form.Label column sm={leftColumn}>Show grid</Form.Label>
+                <Col sm={rightColumn}>
+                  <Checkbox
+                    style={{'marginTop': '0.4rem'}}
+                    checked={!gridIsHidden}
+                    onChange={this.props.toggleGridVisibility}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column sm={leftColumn}>Amount of columns</Form.Label>
+                <Col sm={rightColumn}>
+                  <Form.Control
+                    onWheel={() => {
+                    }}
+                    onChange={this.changeColumnsAmount.bind(this)}
+                    size={'sm'}
+                    type={'number'}
+                    defaultValue={columnsAmount}
+                    ref={this.colAmountInput}
+                    min={1}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column sm={leftColumn}>Offset between columns</Form.Label>
+                <Col sm={rightColumn}>
+                  <Form.Control
+                    onChange={this.changeColumnsOffset.bind(this)}
+                    size={'sm'}
+                    type={'number'}
+                    defaultValue={columnsOffset}
+                    ref={this.colOffsetInput}
+                    min={1}
+                  />
+                </Col>
+              </Form.Group>
             </Col>
-          </Form.Group>
-          <Form.Group as={Row}>
-            <Form.Label column sm={8}>Amount of columns</Form.Label>
-            <Col sm={4}>
-              <Form.Control
-                onWheel={() => {}}
-                onChange={this.changeColumnsAmount.bind(this)}
-                size={'sm'}
-                type={'number'}
-                defaultValue={columnsAmount}
-                ref={this.colAmountInput}
-                min={1}
-              />
+            <Col sm={6}>
+              <Form.Group as={Row}>
+                <Form.Label column sm={leftColumn}>Same offsets</Form.Label>
+                <Col sm={rightColumn}>
+                  <Checkbox
+                    style={{'marginTop': '0.4rem'}}
+                    checked={samePadding}
+                    onChange={this.props.toggleSamePadding}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column sm={leftColumn}>
+                  {samePadding ? 'Padding on the sides of the grid' : 'Left grid padding'}
+                </Form.Label>
+                <Col sm={rightColumn}>
+                  <Form.Control
+                    onChange={samePadding ? this.changeBothOffsets.bind(this) : this.changeLeftPadding.bind(this)}
+                    size={'sm'}
+                    type={'number'}
+                    defaultValue={leftPadding}
+                    ref={this.leftPaddingInput}
+                    min={1}
+                  />
+                </Col>
+              </Form.Group>
+              {samePadding ? null : (<Form.Group as={Row}>
+                <Form.Label column sm={leftColumn}>Right grid offset</Form.Label>
+                <Col sm={rightColumn}>
+                  <Form.Control
+                    onChange={this.changeRightPadding.bind(this)}
+                    size={'sm'}
+                    type={'number'}
+                    defaultValue={rightPadding}
+                    ref={this.rightPaddingInput}
+                    min={1}
+                  />
+                </Col>
+              </Form.Group>)}
             </Col>
-          </Form.Group>
-          <Form.Group as={Row}>
-            <Form.Label column sm={8}>Offset between columns</Form.Label>
-            <Col sm={4}>
-              <Form.Control
-                onChange={this.changeColumnsOffset.bind(this)}
-                size={'sm'}
-                type={'number'}
-                defaultValue={columnsOffset}
-                ref={this.colOffsetInput}
-                min={1}
-              />
-            </Col>
-          </Form.Group>
+          </Row>
         </Form>
       </Popover>
     );
@@ -92,7 +155,7 @@ class GridSettingsComp extends Component {
           size={'sm'}
           variant={'default'}
         >
-          <FontAwesomeIcon icon="th" />
+          <FontAwesomeIcon icon="th"/>
         </Button>
       </OverlayTrigger>
     )
@@ -100,17 +163,11 @@ class GridSettingsComp extends Component {
 }
 
 const mapProps = state => {
-  return {
-    ...state.EditorReducer.gridSettings
-  }
+  return {...state.EditorReducer.gridSettings}
 };
 
 const mapAction = dispatch => {
-  return {
-    toggleGridVisibility: () => {dispatch(toggleGridVisibility())},
-    changeColumnsAmount: amount => {dispatch(changeColumnsAmount(amount))},
-    changeColumnsOffset: offset => {dispatch(changeColumnsOffset(offset))}
-  }
+  return {...bindActionCreators(GridSettingsActions, dispatch)}
 };
 
 const GridSettings = connect(mapProps, mapAction)(GridSettingsComp);

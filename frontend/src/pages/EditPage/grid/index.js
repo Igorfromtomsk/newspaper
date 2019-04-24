@@ -1,22 +1,43 @@
 import React, {Component} from 'react';
 import S from './styles.module.css';
 import {connect} from "react-redux";
+import classNames from 'classnames';
 
 
 class GridComp extends Component {
   renderGrid() {
-    const {columnsAmount, columnsOffset} = this.props;
+    const {
+      columnsAmount,
+      columnsOffset,
+      leftPadding, rightPadding
+    } = this.props;
 
     return (
-      <div className={S.grid}>
+      <div
+        className={S.grid}
+        style={{
+          paddingLeft: `${leftPadding}px`,
+          paddingRight: `${rightPadding}px`
+        }}
+      >
         {Array.from(Array(columnsAmount), (x, i) => i + 1).map(col => (
-          <div
-            key={col}
-            className={S.column}
-            style={{
-              margin: `0 ${columnsOffset/2}px`
-            }}
-          />
+          <div className={classNames(S.fGrow, S.dFlex)} key={`d-${col}`}>
+            <div
+              key={col}
+              className={classNames(S.column, S.dFlex)}
+              style={{
+                marginLeft: col !== 1 ? `${columnsOffset/2}px` : null,
+                marginRight: col !== columnsAmount ? `${columnsOffset/2}px` : null
+              }}
+            >
+              <div key={`lg-${col}`} className={S.guide} />
+              <div key={`s-${col}`} className={S.fGrow} />
+              <div key={`rg-${col}`} className={S.guide} />
+            </div>
+            {col !== columnsAmount ? (
+              <div key={`acg-${col}`} className={classNames(S.guide, S.guideBetweenColumns)} />
+            ) : null}
+          </div>
         ))}
       </div>
     )

@@ -1,13 +1,20 @@
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library } from '@fortawesome/fontawesome-svg-core';
+
 import {
   faTh,
-  faCheck
-} from '@fortawesome/free-solid-svg-icons'
+  faCheck,
+  faEye,
+  faEyeSlash,
+  faVectorSquare
+} from '@fortawesome/free-solid-svg-icons';
 
 
 library.add(
   faTh,
-  faCheck
+  faCheck,
+  faEye,
+  faEyeSlash,
+  faVectorSquare
 );
 
 

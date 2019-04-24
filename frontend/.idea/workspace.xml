@@ -2,48 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c6e8fb2-c3cb-4540-9690-38a329ded13a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_styles/bootstrap-rebuild.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_styles/variables.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/editor/gridSettings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/generalActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_shared/checkbox/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_shared/checkbox/styles.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/editor/gridSettings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/general.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fontAwesome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/grid/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/grid/styles.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/stateBar/gridSettings/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/stateBar/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/stateBar/styles.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/styles.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/userBar/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/userBar/styles.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/editor/girdSettings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/editor/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/general.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/editor/drawRect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/editor/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/blank/blank.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/blank/styles.module.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/editor/drawRect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/editor/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/styles.module.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/editor/drawRect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_styles/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/_styles/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_styles/styles.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/_styles/styles.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/styles.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/styles.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_styles/bootstrap-rebuild.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/_styles/bootstrap-rebuild.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/editor/gridSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/editor/gridSettings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/editor/gridSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/editor/gridSettings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fontAwesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fontAwesome.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/IndexPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/IndexPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PostsPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PostsPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/grid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/grid/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/grid/styles.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/grid/styles.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/stateBar/gridSettings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/stateBar/gridSettings/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/stateBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/stateBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/stateBar/styles.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/stateBar/styles.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/styles.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/styles.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/userBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/userBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/userBar/styles.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/userBar/styles.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/editor/girdSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/editor/girdSettings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/editor/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,31 +45,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            <state relative-caret-position="225">
+              <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/stateBar/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="39" lean-forward="true" selection-start-column="39" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/stateBar/gridSettings/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="80" column="6" lean-forward="true" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+            <state relative-caret-position="248">
+              <caret line="68" column="35" lean-forward="true" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -93,10 +69,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/styles.module.sass">
+        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+            <state relative-caret-position="225">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/editor/drawRect.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/editor/drawRect.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/constants/editor/drawRect.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -119,10 +122,27 @@
       <find>toggleGridVisibility</find>
       <find>toogleGridVisibility</find>
       <find>TOOGLE_GRID_VISIBILITY</find>
+      <find>changeLeftOffset</find>
+      <find>sameOffsets</find>
+      <find>toggleSamePadding</find>
+      <find>rightOffsetInput</find>
+      <find>startDraw</find>
+      <find>sameOffset</find>
+      <find>isDrawingNow</find>
+      <find>this.workSpaceInner</find>
+      <find>this.workSpace</find>
     </findStrings>
     <replaceStrings>
       <replace>toggleGridVisibility</replace>
       <replace>TOGGLE_GRID_VISIBILITY</replace>
+      <replace>sameOffsets</replace>
+      <replace>changeLeftPadding</replace>
+      <replace>samePadding</replace>
+      <replace>rightPaddingInput</replace>
+      <replace>startDrawing</replace>
+      <replace>drawingModeOn</replace>
+      <replace>this.workSpace</replace>
+      <replace>this.workSpaceInner</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -136,23 +156,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/actions/posts.js" />
-        <option value="$PROJECT_DIR$/src/components/Menu/styles.sass" />
-        <option value="$PROJECT_DIR$/src/App.sass" />
-        <option value="$PROJECT_DIR$/src/pages/SinglePostPage/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/SinglePostPage/styles.module.sass" />
-        <option value="$PROJECT_DIR$/src/reducers/posts.js" />
-        <option value="$PROJECT_DIR$/src/components/Footer/styles.module.sass" />
-        <option value="$PROJECT_DIR$/src/.env" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/Menu/index.js" />
         <option value="$PROJECT_DIR$/src/reducers/common.js" />
         <option value="$PROJECT_DIR$/src/pages/PostsPage/index.js" />
         <option value="$PROJECT_DIR$/src/pages/IndexPage/index.js" />
         <option value="$PROJECT_DIR$/src/pages/AboutPage/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js" />
         <option value="$PROJECT_DIR$/src/_styles/styles.module.sass" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
@@ -161,32 +170,43 @@
         <option value="$PROJECT_DIR$/src/constants/general.js" />
         <option value="$PROJECT_DIR$/src/actions/generalActions.js" />
         <option value="$PROJECT_DIR$/src/components/Footer/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/stateBar/index.js" />
         <option value="$PROJECT_DIR$/src/index.sass" />
-        <option value="$PROJECT_DIR$/src/_styles/bootstrap-rebuild.sass" />
-        <option value="$PROJECT_DIR$/src/fontAwesome.js" />
         <option value="$PROJECT_DIR$/src/_styles/variables.sass" />
         <option value="$PROJECT_DIR$/src/components/_shared/checkbox/styles.module.sass" />
-        <option value="$PROJECT_DIR$/src/reducers/editor/index.js" />
         <option value="$PROJECT_DIR$/src/reducers/general.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/pages/EditPage/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/styles.module.sass" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/grid/styles.module.sass" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/grid/index.js" />
-        <option value="$PROJECT_DIR$/src/constants/editor/gridSettings.js" />
-        <option value="$PROJECT_DIR$/src/actions/editor/gridSettings.js" />
-        <option value="$PROJECT_DIR$/src/reducers/editor/girdSettings.js" />
         <option value="$PROJECT_DIR$/src/components/_shared/checkbox/index.js" />
         <option value="$PROJECT_DIR$/src/components/_shared/scrollChanger/index.js" />
         <option value="$PROJECT_DIR$/src/utils/changeInputByScrolling.js" />
         <option value="$PROJECT_DIR$/src/components/_shared/inputScroller/index.js" />
         <option value="$PROJECT_DIR$/src/components/_shared/input/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/styles.module.sass" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/stateBar/styles.module.sass" />
         <option value="$PROJECT_DIR$/src/components/Menu/styles.module.sass" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/styles.module.sass" />
+        <option value="$PROJECT_DIR$/src/actions/editor/index.js" />
+        <option value="$PROJECT_DIR$/src/constants/editor/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/editor/gridSettings.js" />
+        <option value="$PROJECT_DIR$/src/constants/editor/gridSettings.js" />
+        <option value="$PROJECT_DIR$/src/reducers/editor/girdSettings.js" />
         <option value="$PROJECT_DIR$/src/pages/EditPage/stateBar/gridSettings/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/grid/styles.module.sass" />
+        <option value="$PROJECT_DIR$/src/_styles/bootstrap-rebuild.sass" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/styles.module.sass" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/index.js" />
+        <option value="$PROJECT_DIR$/src/components/blank/styles.module.sass" />
+        <option value="$PROJECT_DIR$/src/components/blank/blank.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/stateBar/index.js" />
+        <option value="$PROJECT_DIR$/src/fontAwesome.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/stateBar/styles.module.sass" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/styles.module.sass" />
+        <option value="$PROJECT_DIR$/src/reducers/editor/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/grid/index.js" />
+        <option value="$PROJECT_DIR$/src/constants/editor/drawRect.js" />
+        <option value="$PROJECT_DIR$/src/actions/editor/drawRect.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/index.js" />
+        <option value="$PROJECT_DIR$/src/reducers/editor/drawRect.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js" />
       </list>
     </option>
   </component>
@@ -220,21 +240,26 @@
               <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="_styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="editor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="_shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -271,7 +296,46 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="EditPage" type="462c0819:PsiDirectoryNode" />
+              <item name="stateBar" type="462c0819:PsiDirectoryNode" />
+              <item name="gridSettings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="EditPage" type="462c0819:PsiDirectoryNode" />
               <item name="userBar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="EditPage" type="462c0819:PsiDirectoryNode" />
+              <item name="userBar" type="462c0819:PsiDirectoryNode" />
+              <item name="drawRect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="EditPage" type="462c0819:PsiDirectoryNode" />
+              <item name="workSpace" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+              <item name="editor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -337,7 +401,7 @@
       <workItem from="1555915299527" duration="3389000" />
       <workItem from="1555926040901" duration="28000" />
       <workItem from="1555926317100" duration="3574000" />
-      <workItem from="1555992381295" duration="18364000" />
+      <workItem from="1555992381295" duration="38448000" />
     </task>
     <task id="LOCAL-00001" summary="react added&#10;routes added&#10;some features made">
       <created>1554276489722</created>
@@ -353,11 +417,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555929274403</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="editor added">
+      <created>1556012486698</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556012486698</updated>
+    </task>
+    <task id="LOCAL-00004" summary="production build">
+      <created>1556014054334</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556014054334</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37359000" />
+    <option name="totallyTimeSpent" value="57443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1110" extended-state="6" />
@@ -432,61 +510,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="react added&#10;routes added&#10;some features made" />
     <MESSAGE value="some styles added" />
-    <option name="LAST_COMMIT_MESSAGE" value="some styles added" />
+    <MESSAGE value="editor added" />
+    <MESSAGE value="production build" />
+    <option name="LAST_COMMIT_MESSAGE" value="production build" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/reducers/sd.html" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actionTypes/posts.js" />
-    <entry file="file://$PROJECT_DIR$/src/actions/posts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SinglePostPage/styles.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SinglePostPage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.module.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -532,16 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Footer/styles.module.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -553,16 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -613,41 +621,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fontAwesome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_styles/bootstrap-rebuild.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_styles/variables.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/_shared/checkbox/styles.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -685,41 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/editor/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/styles.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/styles.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/generalActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="48" lean-forward="true" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/_shared/checkbox/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -727,23 +669,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/editor/girdSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -756,38 +681,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/changeInputByScrolling.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/editor/gridSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/editor/gridSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
-          <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/stateBar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="39" lean-forward="true" selection-start-column="39" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/_shared/input/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -806,24 +699,231 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/stateBar/styles.module.sass">
+    <entry file="file://$PROJECT_DIR$/src/_styles/variables.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/_shared/checkbox/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/generalActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/editor/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/editor/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="59" selection-start-column="59" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_styles/bootstrap-rebuild.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/blank/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/blank/blank.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fontAwesome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/styles.module.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        <state relative-caret-position="165">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/stateBar/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/editor/gridSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/editor/gridSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/stateBar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/EditPage/stateBar/gridSettings/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="80" column="6" lean-forward="true" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+        <state relative-caret-position="565">
+          <caret line="168" column="31" lean-forward="true" selection-start-line="168" selection-start-column="31" selection-end-line="169" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1463#4849#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/editor/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/editor/drawRect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/editor/drawRect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/editor/drawRect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/editor/girdSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="68" column="35" lean-forward="true" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
