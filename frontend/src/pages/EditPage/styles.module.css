@@ -21,3 +21,8 @@ html {
   min-height: 100%;
   height: 100%;
   overflow: hidden; }
+
+.editor {
+  height: 100%;
+  margin: calc(-3rem);
+  position: relative; }

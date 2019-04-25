@@ -1,0 +1,33 @@
+.userBar {
+  width: calc(3rem - 6px);
+  box-sizing: border-box;
+  padding: calc(3rem + .5rem - 3px) calc(.5rem - 3px) calc(.5rem - 3px);
+  position: fixed;
+  left: 0;
+  top: 60px;
+  height: calc(100% - 3rem - 12px);
+  z-index: 2;
+  overflow: visible;
+  -webkit-transition: ease 0.15s;
+  -moz-transition: ease 0.15s;
+  -ms-transition: ease 0.15s;
+  -o-transition: ease 0.15s;
+  transition: ease 0.15s; }
+  .userBar.hidden {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0; }
+    .userBar.hidden > * {
+      opacity: 0; }
+  .userBar * {
+    position: relative;
+    z-index: 1; }
+  .userBar:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #bbb; }

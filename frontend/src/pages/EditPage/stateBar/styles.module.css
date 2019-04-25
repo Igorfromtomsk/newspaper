@@ -1,0 +1,101 @@
+.container {
+  padding: 0 15px; }
+
+.mainContainer {
+  padding: 3rem; }
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column; }
+
+.dFlex {
+  display: flex; }
+  .dFlex.dColumn {
+    flex-direction: column; }
+
+.fGrow {
+  flex-grow: 2; }
+
+body,
+html {
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.stateBar {
+  height: calc(3rem - 6px);
+  box-sizing: border-box;
+  display: flex;
+  padding: calc(.5rem - 3px);
+  align-items: center;
+  position: fixed;
+  top: calc(60px);
+  width: calc(100%);
+  z-index: 3;
+  overflow: visible;
+  -webkit-transition: ease 0.15s;
+  -moz-transition: ease 0.15s;
+  -ms-transition: ease 0.15s;
+  -o-transition: ease 0.15s;
+  transition: ease 0.15s; }
+  .stateBar.hidden {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0; }
+    .stateBar.hidden > *:not(.visibilityToggle) {
+      opacity: 0; }
+  .stateBar * {
+    position: relative;
+    z-index: 1;
+    -webkit-transition: ease 0.15s;
+    -moz-transition: ease 0.15s;
+    -ms-transition: ease 0.15s;
+    -o-transition: ease 0.15s;
+    transition: ease 0.15s; }
+  .stateBar:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #bbb; }
+
+.visibilityToggle {
+  border: none;
+  background: white;
+  box-shadow: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  right: calc(.5rem - 3px);
+  top: calc(.5rem - 3px);
+  color: #007bff;
+  -webkit-transition: ease 0.15s;
+  -moz-transition: ease 0.15s;
+  -ms-transition: ease 0.15s;
+  -o-transition: ease 0.15s;
+  transition: ease 0.15s; }
+  .visibilityToggle svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: ease 0.15s;
+    -moz-transition: ease 0.15s;
+    -ms-transition: ease 0.15s;
+    -o-transition: ease 0.15s;
+    transition: ease 0.15s; }
+    .visibilityToggle svg:last-child {
+      opacity: 0; }
+  .visibilityToggle:hover {
+    box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.25); }
+  .visibilityToggle:active, .visibilityToggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  .visibilityToggle.hidden svg:first-child {
+    opacity: 0; }
+  .visibilityToggle.hidden svg:last-child {
+    opacity: 1; }
