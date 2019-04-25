@@ -11,19 +11,63 @@ class WorkSpaceComp extends Component {
 
     this.workSpaceInner = React.createRef();
     this.state = {drawingIsStarted: false};
+    console.log(this.props)
   }
 
-  getCoordinate(e) {
+  getCoordinateX(e) {
+    const relativeXCoordinate = this.workSpaceInner.current === e.target;
+
     let {width} = this.workSpaceInner.current.getBoundingClientRect();
     let {leftPadding} = this.props;
-    const relativeXCoordinate = this.workSpaceInner.current === e.target;
-    const xCoordinate = relativeXCoordinate ?
+
+    let Coordinate = relativeXCoordinate ?
       e.nativeEvent.offsetX :
       leftPadding >= e.nativeEvent.offsetX ?
         (leftPadding - e.nativeEvent.offsetX) * -1 :
         e.nativeEvent.offsetX - leftPadding;
 
-    return 100 * xCoordinate / width;
+    return this.magnetizeCoordinateXToGuides(100 * Coordinate / width);
+  }
+
+  magnetizeCoordinateYToGuides(y) {
+    if (!this.props.smartGuides) return y;
+
+    this.props.layers.forEach(layer => {
+      const {y1, y2} = layer.coords;
+      const {captureRadius} = this.props;
+
+      if (
+        y >= y1 - captureRadius &&
+        y < y1 + captureRadius
+      ) {
+        y = y1;
+      }
+
+      if (
+        y >= y2 - captureRadius &&
+        y < y2 + captureRadius
+      ) {
+        y = y2;
+      }
+    });
+
+    return y;
+  }
+
+  magnetizeCoordinateXToGuides(x) {
+    let {width} = this.workSpaceInner.current.getBoundingClientRect();
+    let captureRadiusInPercent = 100 * this.props.captureRadius / width;
+
+    this.props.gridGuides.forEach(guide => {
+      if (
+          x >= (guide.x - captureRadiusInPercent) &&
+          x < (guide.x + captureRadiusInPercent)
+      ) {
+        x = guide.x;
+      }
+    });
+
+    return x;
   }
 
   startDrawing(e) {
@@ -32,8 +76,8 @@ class WorkSpaceComp extends Component {
     let newLayer = {
       id: layers.length,
       coords: {
-        x1: this.getCoordinate(e),
-        y1: e.nativeEvent.offsetY,
+        x1: this.getCoordinateX(e),
+        y1: this.magnetizeCoordinateYToGuides(e.nativeEvent.offsetY),
         x2: 0,
         y2: 0
       },
@@ -55,11 +99,12 @@ class WorkSpaceComp extends Component {
 
     let {activeLayerId, layers} = this.props;
     let activeLayer = layers.filter(layer => layer.id === activeLayerId)[0];
+    let y = this.magnetizeCoordinateYToGuides(e.nativeEvent.offsetY)
 
-    activeLayer.coords.x2 = this.getCoordinate(e);
-    activeLayer.coords.y2 = e.nativeEvent.offsetY;
-    activeLayer.width = Math.abs(this.getCoordinate(e) - activeLayer.coords.x1);
-    activeLayer.height = Math.abs(e.nativeEvent.offsetY - activeLayer.coords.y1);
+    activeLayer.coords.x2 = this.getCoordinateX(e);
+    activeLayer.coords.y2 = y;
+    activeLayer.width = Math.abs(this.getCoordinateX(e) - activeLayer.coords.x1);
+    activeLayer.height = Math.abs(y - activeLayer.coords.y1);
 
     this.setState({layers: [...layers]});
   }
@@ -67,6 +112,8 @@ class WorkSpaceComp extends Component {
 
   render() {
     const {drawingModeOn, layers, drawingIsStarted, leftPadding, rightPadding} = this.props;
+    let {width} = this.workSpaceInner.current ? this.workSpaceInner.current.getBoundingClientRect() : 1;
+    let onePixelInPercent = 100 / width;
 
     return (
       <div
@@ -88,9 +135,9 @@ class WorkSpaceComp extends Component {
             className={S.rectangle}
             key={layer.id}
             style={{
-              left: `${Math.abs(layer.coords.x1) <= Math.abs(layer.coords.x2) ? layer.coords.x1 : layer.coords.x2}%`,
-              top: `${layer.coords.y1 <= layer.coords.y2 ? layer.coords.y1 : layer.coords.y2}px`,
-              width: `${layer.width}%`,
+              left: `${layer.coords.x1 < layer.coords.x2 ? layer.coords.x1 : layer.coords.x2}%`,
+              top: `${layer.coords.y1 < layer.coords.y2 ? layer.coords.y1 : layer.coords.y2}px`,
+              width: `${onePixelInPercent + layer.width}%`,
               height: `${layer.height}px`,
               pointerEvents: drawingIsStarted ? 'none' : 'auto'
             }}
@@ -105,7 +152,7 @@ class WorkSpaceComp extends Component {
 const mapProps = state => {
   return {
     ...state.EditorReducer.gridSettings,
-    ...state.EditorReducer.drawRect
+    ...state.EditorReducer.drawRect.present
   }
 };
 

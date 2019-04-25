@@ -17,7 +17,6 @@ function index(state = initialState, action) {
   }
 }
 
-
 export default function EditorReducer(state = {}, action) {
   return {
     index: index(state.index, action),

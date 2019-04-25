@@ -23,3 +23,7 @@ export function changeRightPadding(offset) {
 export function toggleSamePadding() {
   return {type: Actions.TOGGLE_SAME_PADDING}
 }
+
+export function addNewGuide(guide) {
+  return {type: Actions.ADD_NEW_GRID_GUIDE, payload: guide}
+}

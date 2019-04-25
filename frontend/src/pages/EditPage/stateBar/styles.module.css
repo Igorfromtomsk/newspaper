@@ -99,3 +99,8 @@ html {
     opacity: 0; }
   .visibilityToggle.hidden svg:last-child {
     opacity: 1; }
+
+.stateGroup + .stateGroup {
+  margin-left: calc(.5rem - 4px);
+  border-left: 1px solid #eee;
+  padding-left: calc(.5rem - 4px); }

@@ -5,7 +5,9 @@ import {
   faCheck,
   faEye,
   faEyeSlash,
-  faVectorSquare
+  faVectorSquare,
+  faUndo,
+  faRedo
 } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -14,7 +16,9 @@ library.add(
   faCheck,
   faEye,
   faEyeSlash,
-  faVectorSquare
+  faVectorSquare,
+  faUndo,
+  faRedo
 );
 
 

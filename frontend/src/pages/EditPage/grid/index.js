@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import S from './styles.module.css';
 import {connect} from "react-redux";
 import classNames from 'classnames';
+import Guide from './guide';
 
 
 class GridComp extends Component {
@@ -14,7 +15,7 @@ class GridComp extends Component {
 
     return (
       <div
-        className={S.grid}
+        className={classNames(S.grid, 'js-guide-wrapper')}
         style={{
           paddingLeft: `${leftPadding}px`,
           paddingRight: `${rightPadding}px`
@@ -30,12 +31,12 @@ class GridComp extends Component {
                 marginRight: col !== columnsAmount ? `${columnsOffset/2}px` : null
               }}
             >
-              <div key={`lg-${col}`} className={S.guide} />
+              <Guide key={`lg-${col}`} />
               <div key={`s-${col}`} className={S.fGrow} />
-              <div key={`rg-${col}`} className={S.guide} />
+              <Guide key={`rg-${col}`} />
             </div>
             {col !== columnsAmount ? (
-              <div key={`acg-${col}`} className={classNames(S.guide, S.guideBetweenColumns)} />
+              <Guide key={`acg-${col}`} className={S.guideBetweenColumns} />
             ) : null}
           </div>
         ))}

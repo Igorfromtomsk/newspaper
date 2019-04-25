@@ -7,7 +7,10 @@ const initState = {
   columnsOffset: 15,
   leftPadding: 150,
   rightPadding: 150,
-  samePadding: true
+  samePadding: true,
+  gridGuides: [],
+  captureRadius: 5,
+  smartGuides: true
 };
 
 
@@ -25,6 +28,8 @@ export default function GridSettingsReducer(state = initState, action) {
       return {...state, rightPadding: action.payload};
     case Actions.TOGGLE_SAME_PADDING:
       return {...state, samePadding: !state.samePadding};
+    case Actions.ADD_NEW_GRID_GUIDE:
+      return {...state, gridGuides: [...state.gridGuides, action.payload]};
     default:
       return state;
   }
