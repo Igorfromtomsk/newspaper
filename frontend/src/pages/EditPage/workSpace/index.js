@@ -10,14 +10,25 @@ class WorkSpaceComp extends Component {
     super(props);
 
     this.workSpaceInner = React.createRef();
-    this.state = {drawingIsStarted: false};
-    console.log(this.props)
+    this.state = {
+      drawingIsStarted: false,
+      activeLayer: null
+    };
+  }
+
+  componentDidMount() {
+    document.addEventListener('keydown', handler);
+
+    function handler(e) {
+      if (e.keyCode === 27 && this.state.drawingIsStarted) {
+        this.setState({drawingIsStarted: false});
+      }
+    }
   }
 
   getCoordinateX(e) {
     const relativeXCoordinate = this.workSpaceInner.current === e.target;
 
-    let {width} = this.workSpaceInner.current.getBoundingClientRect();
     let {leftPadding} = this.props;
 
     let Coordinate = relativeXCoordinate ?
@@ -26,7 +37,7 @@ class WorkSpaceComp extends Component {
         (leftPadding - e.nativeEvent.offsetX) * -1 :
         e.nativeEvent.offsetX - leftPadding;
 
-    return this.magnetizeCoordinateXToGuides(100 * Coordinate / width);
+    return this.magnetizeCoordinateXToGuides(Coordinate);
   }
 
   magnetizeCoordinateYToGuides(y) {
@@ -55,13 +66,12 @@ class WorkSpaceComp extends Component {
   }
 
   magnetizeCoordinateXToGuides(x) {
-    let {width} = this.workSpaceInner.current.getBoundingClientRect();
-    let captureRadiusInPercent = 100 * this.props.captureRadius / width;
+    let captureRadiusInPercent = this.props.captureRadius;
 
     this.props.gridGuides.forEach(guide => {
       if (
-          x >= (guide.x - captureRadiusInPercent) &&
-          x < (guide.x + captureRadiusInPercent)
+        x >= (guide.x - captureRadiusInPercent) &&
+        x < (guide.x + captureRadiusInPercent)
       ) {
         x = guide.x;
       }
@@ -85,35 +95,45 @@ class WorkSpaceComp extends Component {
       height: 0
     };
 
-    this.props.startRectangleDrawing(newLayer);
-  }
-  
-  
-  stopDrawing() {
-    this.props.saveRectangleDrawing()
+    this.setState({
+      drawingIsStarted: true,
+      activeLayer: newLayer
+    });
   }
 
-
-  draw(e) {
+  drawing(e) {
     e.stopPropagation();
 
-    let {activeLayerId, layers} = this.props;
-    let activeLayer = layers.filter(layer => layer.id === activeLayerId)[0];
-    let y = this.magnetizeCoordinateYToGuides(e.nativeEvent.offsetY)
+    let {activeLayer} = this.state;
+    let y = this.magnetizeCoordinateYToGuides(e.nativeEvent.offsetY);
 
-    activeLayer.coords.x2 = this.getCoordinateX(e);
-    activeLayer.coords.y2 = y;
-    activeLayer.width = Math.abs(this.getCoordinateX(e) - activeLayer.coords.x1);
-    activeLayer.height = Math.abs(y - activeLayer.coords.y1);
-
-    this.setState({layers: [...layers]});
+    this.setState({
+      activeLayer: {
+        ...activeLayer,
+        coords: {
+          ...activeLayer.coords,
+          x2: this.getCoordinateX(e),
+          y2: y
+        },
+        width: Math.abs(this.getCoordinateX(e) - activeLayer.coords.x1),
+        height: Math.abs(y - activeLayer.coords.y1)
+      }
+    });
   }
 
+  stopDrawing() {
+    this.props.saveRectangleDrawing(this.state.activeLayer);
+    this.setState({
+      drawingIsStarted: false,
+      activeLayer: null
+    });
+  }
 
   render() {
-    const {drawingModeOn, layers, drawingIsStarted, leftPadding, rightPadding} = this.props;
-    let {width} = this.workSpaceInner.current ? this.workSpaceInner.current.getBoundingClientRect() : 1;
-    let onePixelInPercent = 100 / width;
+    const {drawingModeOn, layers, leftPadding, rightPadding} = this.props;
+    const {drawingIsStarted, activeLayer} = this.state;
+
+    let onePixelInPercent = 1;
 
     return (
       <div
@@ -123,8 +143,9 @@ class WorkSpaceComp extends Component {
           paddingLeft: `${leftPadding}px`,
           paddingRight: `${rightPadding}px`
         }}
+        onClick={this.props.onClick}
         onMouseDown={drawingModeOn ? this.startDrawing.bind(this) : null}
-        onMouseMove={drawingIsStarted ? this.draw.bind(this) : null}
+        onMouseMove={drawingIsStarted ? this.drawing.bind(this) : null}
         onMouseUp={drawingIsStarted ? this.stopDrawing.bind(this) : null}
       >
         <div
@@ -135,13 +156,27 @@ class WorkSpaceComp extends Component {
             className={S.rectangle}
             key={layer.id}
             style={{
-              left: `${layer.coords.x1 < layer.coords.x2 ? layer.coords.x1 : layer.coords.x2}%`,
+              left: `${layer.coords.x1 < layer.coords.x2 ? layer.coords.x1 : layer.coords.x2}px`,
               top: `${layer.coords.y1 < layer.coords.y2 ? layer.coords.y1 : layer.coords.y2}px`,
-              width: `${onePixelInPercent + layer.width}%`,
+              width: `${onePixelInPercent + layer.width}px`,
               height: `${layer.height}px`,
               pointerEvents: drawingIsStarted ? 'none' : 'auto'
             }}
           />))}
+          {
+            activeLayer ? (
+              <div
+                className={S.rectangle}
+                style={{
+                  left: `${activeLayer.coords.x1 < activeLayer.coords.x2 ? activeLayer.coords.x1 : activeLayer.coords.x2}px`,
+                  top: `${activeLayer.coords.y1 < activeLayer.coords.y2 ? activeLayer.coords.y1 : activeLayer.coords.y2}px`,
+                  width: `${onePixelInPercent + activeLayer.width}px`,
+                  height: `${activeLayer.height}px`,
+                  pointerEvents: drawingIsStarted ? 'none' : 'auto'
+                }}
+              />
+            ) : null
+          }
         </div>
       </div>
     )
@@ -151,8 +186,8 @@ class WorkSpaceComp extends Component {
 
 const mapProps = state => {
   return {
-    ...state.EditorReducer.gridSettings,
-    ...state.EditorReducer.drawRect.present
+    ...state.EditorReducer.present.gridSettings,
+    ...state.EditorReducer.present.drawRect
   }
 };
 

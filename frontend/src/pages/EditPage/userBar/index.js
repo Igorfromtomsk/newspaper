@@ -11,7 +11,9 @@ class UserBarComp extends Component {
       <div
         className={classNames(S.userBar, {[`${S.hidden}`]: this.props.uiIsHidden})}
       >
-        <DrawRect/>
+        <DrawRect
+          turnOnRectDrawMode={this.props.turnOnRectDrawMode}
+        />
       </div>
     )
   }

@@ -5,12 +5,18 @@ const initState = {
   gridIsHidden: false,
   columnsAmount: 6,
   columnsOffset: 15,
-  leftPadding: 150,
-  rightPadding: 150,
+  leftPadding: 218,
+  rightPadding: 218,
+  width: 800,
   samePadding: true,
   gridGuides: [],
+  gridSmartGuide: {
+    shown: false,
+    coords: {}
+  },
   captureRadius: 5,
-  smartGuides: true
+  smartGuides: true,
+  windowWidth: 1236
 };
 
 
@@ -28,8 +34,12 @@ export default function GridSettingsReducer(state = initState, action) {
       return {...state, rightPadding: action.payload};
     case Actions.TOGGLE_SAME_PADDING:
       return {...state, samePadding: !state.samePadding};
+    case Actions.CHANGE_WIDTH:
+      return {...state, width: action.payload};
     case Actions.ADD_NEW_GRID_GUIDE:
       return {...state, gridGuides: [...state.gridGuides, action.payload]};
+    case Actions.RESIZE:
+      return {...state, windowWidth: action.payload};
     default:
       return state;
   }

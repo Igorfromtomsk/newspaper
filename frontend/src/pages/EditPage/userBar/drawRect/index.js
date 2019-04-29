@@ -13,7 +13,7 @@ class DrawRectComp extends Component {
         title={'Draw rectangle'}
         size={'sm'}
         variant={'default'}
-        onClick={this.props.rectangleDrawingModeOn}
+        onClick={this.props.turnOnRectDrawMode}
       >
         <FontAwesomeIcon icon="vector-square"/>
       </Button>

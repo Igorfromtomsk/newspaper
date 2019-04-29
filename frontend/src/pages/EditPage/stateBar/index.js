@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import S from './styles.module.css';
 import GridSettings from "./gridSettings";
+import UndoRedo from './undoRedo';
 import classNames from 'classnames';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {toggleUiVisibility} from '../../../actions/editor';
-import {undo, redo} from '../../../actions/editor';
 import {connect} from "react-redux";
-import Button from "react-bootstrap/Button";
 
 
 class StateBarComp extends Component {
@@ -18,20 +17,7 @@ class StateBarComp extends Component {
             <GridSettings/>
           </div>
           <div className={S.stateGroup}>
-            <Button
-              onClick={this.props.undo}
-              size={'sm'}
-              variant={'default'}
-            >
-              <FontAwesomeIcon icon={'undo'}/>
-            </Button>
-            <Button
-              onClick={this.props.redo}
-              size={'sm'}
-              variant={'default'}
-            >
-              <FontAwesomeIcon icon={'redo'}/>
-            </Button>
+            <UndoRedo/>
           </div>
         </div>
         <button
@@ -56,9 +42,7 @@ const mapProps = state => {
 
 const mapActions = dispatch => {
   return {
-    toggleUiVisibility: () => { dispatch(toggleUiVisibility()) },
-    undo: () => { dispatch(undo()) },
-    redo: () => { dispatch(redo()) }
+    toggleUiVisibility: () => { dispatch(toggleUiVisibility()) }
   }
 };
 

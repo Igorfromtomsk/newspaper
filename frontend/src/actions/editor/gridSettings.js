@@ -20,10 +20,18 @@ export function changeRightPadding(offset) {
   return {type: Actions.CHANGE_RIGHT_PADDING, payload: offset}
 }
 
+export function changeWidth(width) {
+  return {type: Actions.CHANGE_WIDTH, payload: width}
+}
+
 export function toggleSamePadding() {
   return {type: Actions.TOGGLE_SAME_PADDING}
 }
 
 export function addNewGuide(guide) {
   return {type: Actions.ADD_NEW_GRID_GUIDE, payload: guide}
+}
+
+export function resize(width) {
+  return {type: Actions.RESIZE, payload: width}
 }

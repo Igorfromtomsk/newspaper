@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import classNames from "classnames";
-import S from "../styles.module.css";
+import S from "./styles.module.css";
 import {addNewGuide} from "../../../../actions/editor/gridSettings";
 import {connect} from "react-redux";
 
 
-class GuidComp extends Component {
+class SmartGuidComp extends Component {
   constructor(props) {
     super(props);
 
@@ -62,6 +62,6 @@ const mapActions = dispatch => {
   }
 };
 
-const Guide = connect(mapProps, mapActions)(GuidComp);
+const SmartGuide = connect(mapProps, mapActions)(SmartGuidComp);
 
-export default Guide;
+export default SmartGuide;

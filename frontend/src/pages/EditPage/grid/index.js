@@ -3,6 +3,7 @@ import S from './styles.module.css';
 import {connect} from "react-redux";
 import classNames from 'classnames';
 import Guide from './guide';
+import SmartGuide from './smartGuide';
 
 
 class GridComp extends Component {
@@ -40,6 +41,7 @@ class GridComp extends Component {
             ) : null}
           </div>
         ))}
+        <SmartGuide />
       </div>
     )
   }
@@ -58,7 +60,7 @@ class GridComp extends Component {
 
 const mapProps = state => {
   return {
-    ...state.EditorReducer.gridSettings
+    ...state.EditorReducer.present.gridSettings
   }
 };
 

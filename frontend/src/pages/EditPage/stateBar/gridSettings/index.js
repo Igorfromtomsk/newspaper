@@ -19,6 +19,12 @@ class GridSettingsComp extends Component {
     this.colOffsetInput = React.createRef();
     this.leftPaddingInput = React.createRef();
     this.rightPaddingInput = React.createRef();
+    this.widthInput = React.createRef();
+
+    this.state = {
+      leftColumn: 7,
+      rightColumn: 5
+    }
   }
 
   changeColumnsAmount(e) {
@@ -42,17 +48,64 @@ class GridSettingsComp extends Component {
     this.props.changeRightPadding(+e.target.value);
   }
 
+  changeWidth(e) {
+    const {windowWidth, samePadding, leftPadding, rightPadding} = this.props;
+    let definition = windowWidth - e.target.value;
+
+    let newLeftPadding = samePadding ? definition / 2 : definition / (leftPadding + rightPadding) * leftPadding;
+    let newRightPadding = samePadding ? definition / 2 : definition / (leftPadding + rightPadding) * rightPadding;
+
+    this.props.changeWidth(+e.target.value);
+    this.props.changeLeftPadding(newLeftPadding);
+    this.props.changeRightPadding(newRightPadding);
+  }
+
+  getPaddingSettings() {
+    const {leftColumn, rightColumn} = this.state;
+    const {leftPadding, rightPadding, samePadding} = this.props;
+
+    return samePadding ? null : (
+      <>
+        <Form.Group as={Row}>
+          <Form.Label column sm={leftColumn}>Left grid padding</Form.Label>
+          <Col sm={rightColumn}>
+            <Form.Control
+              onChange={this.changeLeftPadding.bind(this)}
+              size={'sm'}
+              type={'number'}
+              defaultValue={leftPadding}
+              ref={this.leftPaddingInput}
+              min={1}
+            />
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row}>
+          <Form.Label column sm={leftColumn}>Right grid offset</Form.Label>
+          <Col sm={rightColumn}>
+            <Form.Control
+              onChange={this.changeRightPadding.bind(this)}
+              size={'sm'}
+              type={'number'}
+              defaultValue={rightPadding}
+              ref={this.rightPaddingInput}
+              min={1}
+            />
+          </Col>
+        </Form.Group>
+      </>
+    )
+  }
+
   render() {
     const {
       gridIsHidden,
       columnsAmount,
       columnsOffset,
-      leftPadding, rightPadding,
-      samePadding
+      samePadding,
+      width
     } = this.props;
 
-    const leftColumn = 7;
-    const rightColumn = 5;
+    const {leftColumn, rightColumn} = this.state;
 
     const popover = (
       <Popover id="popover-basic" title="Grid settings" className={['large-popover', 'grid-settings']}>
@@ -110,33 +163,19 @@ class GridSettingsComp extends Component {
                 </Col>
               </Form.Group>
               <Form.Group as={Row}>
-                <Form.Label column sm={leftColumn}>
-                  {samePadding ? 'Padding on the sides of the grid' : 'Left grid padding'}
-                </Form.Label>
+                <Form.Label column sm={leftColumn}>Width</Form.Label>
                 <Col sm={rightColumn}>
                   <Form.Control
-                    onChange={samePadding ? this.changeBothOffsets.bind(this) : this.changeLeftPadding.bind(this)}
+                    onChange={this.changeWidth.bind(this)}
                     size={'sm'}
                     type={'number'}
-                    defaultValue={leftPadding}
-                    ref={this.leftPaddingInput}
+                    defaultValue={width}
+                    ref={this.widthInput}
                     min={1}
                   />
                 </Col>
               </Form.Group>
-              {samePadding ? null : (<Form.Group as={Row}>
-                <Form.Label column sm={leftColumn}>Right grid offset</Form.Label>
-                <Col sm={rightColumn}>
-                  <Form.Control
-                    onChange={this.changeRightPadding.bind(this)}
-                    size={'sm'}
-                    type={'number'}
-                    defaultValue={rightPadding}
-                    ref={this.rightPaddingInput}
-                    min={1}
-                  />
-                </Col>
-              </Form.Group>)}
+              {this.getPaddingSettings()}
             </Col>
           </Row>
         </Form>
@@ -163,7 +202,7 @@ class GridSettingsComp extends Component {
 }
 
 const mapProps = state => {
-  return {...state.EditorReducer.gridSettings}
+  return {...state.EditorReducer.present.gridSettings}
 };
 
 const mapAction = dispatch => {
