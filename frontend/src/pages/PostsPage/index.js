@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 class PostsPageComponent extends Component {
   componentDidMount() {
-    document.title = `${this.props.title} | Posts`;
+    document.title = `${process.env.REACT_APP_TITLE} | Posts`;
   }
 
   render() {

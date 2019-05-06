@@ -28,7 +28,7 @@ class EditPageComp extends Component {
   }
 
   componentDidMount() {
-    document.title = `${this.props.general.title} | Editor`;
+    document.title = `${process.env.REACT_APP_TITLE} | Editor`;
     this.props.hideFooter();
 
     document.onkeydown = this.keyDown.bind(this);

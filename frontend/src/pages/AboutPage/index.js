@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 
 class AboutPageComp extends Component {
   componentDidMount() {
-    document.title = `${this.props.title} | Home`;
+    document.title = `${process.env.REACT_APP_TITLE} | Home`;
   }
 
 

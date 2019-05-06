@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import S from './styles.module.css';
 import * as RectangleDrawingActions from "../../../actions/editor/drawRect";
+import {showSmartGuide, hideSmartGuide} from "../../../actions/editor/gridSettings";
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
 
@@ -43,15 +44,20 @@ class WorkSpaceComp extends Component {
   magnetizeCoordinateYToGuides(y) {
     if (!this.props.smartGuides) return y;
 
+    let showSG = false;
+    let x, width;
+
     this.props.layers.forEach(layer => {
-      const {y1, y2} = layer.coords;
+      const {y1, y2, x1, x2} = layer.coords;
       const {captureRadius} = this.props;
+      x = x1 < x2 ? x2 : x1;
 
       if (
         y >= y1 - captureRadius &&
         y < y1 + captureRadius
       ) {
         y = y1;
+        showSG = true;
       }
 
       if (
@@ -59,8 +65,20 @@ class WorkSpaceComp extends Component {
         y < y2 + captureRadius
       ) {
         y = y2;
+        showSG = true;
       }
     });
+
+    if (showSG) {
+      if (this.state.activeLayer) {
+        width = Math.abs(this.state.activeLayer.coords.x2 - x);
+
+        x = this.state.activeLayer.coords.x2 > x ? x : this.state.activeLayer.coords.x2;
+      }
+      this.props.showSmartGuide({x, y, width});
+    } else {
+      this.props.hideSmartGuide();
+    }
 
     return y;
   }
@@ -123,6 +141,7 @@ class WorkSpaceComp extends Component {
 
   stopDrawing() {
     this.props.saveRectangleDrawing(this.state.activeLayer);
+    this.props.hideSmartGuide();
     this.setState({
       drawingIsStarted: false,
       activeLayer: null
@@ -192,7 +211,11 @@ const mapProps = state => {
 };
 
 const mapActions = dispatch => {
-  return {...bindActionCreators(RectangleDrawingActions, dispatch)}
+  return {
+    ...bindActionCreators(RectangleDrawingActions, dispatch),
+    showSmartGuide: coords => {dispatch(showSmartGuide(coords))},
+    hideSmartGuide: () => {dispatch(hideSmartGuide())}
+  }
 };
 
 

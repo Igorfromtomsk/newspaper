@@ -40,6 +40,10 @@ export default function GridSettingsReducer(state = initState, action) {
       return {...state, gridGuides: [...state.gridGuides, action.payload]};
     case Actions.RESIZE:
       return {...state, windowWidth: action.payload};
+    case Actions.SHOW_SMART_GUIDE:
+      return {...state, gridSmartGuide: {shown: true, coords: action.payload}};
+    case Actions.HIDE_SMART_GUIDE:
+      return {...state, gridSmartGuide: initState.gridSmartGuide};
     default:
       return state;
   }

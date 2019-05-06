@@ -35,3 +35,11 @@ export function addNewGuide(guide) {
 export function resize(width) {
   return {type: Actions.RESIZE, payload: width}
 }
+
+export function showSmartGuide(coords) {
+  return {type: Actions.SHOW_SMART_GUIDE, payload: coords}
+}
+
+export function hideSmartGuide() {
+  return {type: Actions.HIDE_SMART_GUIDE}
+}

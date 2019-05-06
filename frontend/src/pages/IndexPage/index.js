@@ -3,7 +3,8 @@ import {connect} from "react-redux";
 
 class IndexPageComp extends Component {
   componentDidMount() {
-    document.title = `${this.props.title} | Home`;
+    console.log(process.env.REACT_APP_TITLE)
+    document.title = `${process.env.REACT_APP_TITLE} | Home`;
   }
 
 
