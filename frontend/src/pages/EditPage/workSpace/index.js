@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import S from './styles.module.css';
-import * as RectangleDrawingActions from "../../../actions/editor/drawRect";
+import * as RectangleDrawingActions from "../../../actions/editor/layers";
 import {showSmartGuide, hideSmartGuide} from "../../../actions/editor/gridSettings";
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
+import Layer from "./layer";
 
 
 class WorkSpaceComp extends Component {
@@ -99,23 +100,22 @@ class WorkSpaceComp extends Component {
   }
 
   startDrawing(e) {
-    let {layers} = this.props;
-
-    let newLayer = {
-      id: layers.length,
-      coords: {
-        x1: this.getCoordinateX(e),
-        y1: this.magnetizeCoordinateYToGuides(e.nativeEvent.offsetY),
-        x2: 0,
-        y2: 0
-      },
-      width: 0,
-      height: 0
-    };
+    let {layers, layerType} = this.props;
 
     this.setState({
       drawingIsStarted: true,
-      activeLayer: newLayer
+      activeLayer: {
+        id: layers.length,
+        coords: {
+          x1: this.getCoordinateX(e),
+          y1: this.magnetizeCoordinateYToGuides(e.nativeEvent.offsetY),
+          x2: 0,
+          y2: 0
+        },
+        type: layerType,
+        width: 0,
+        height: 0
+      }
     });
   }
 
@@ -152,8 +152,6 @@ class WorkSpaceComp extends Component {
     const {drawingModeOn, layers, leftPadding, rightPadding} = this.props;
     const {drawingIsStarted, activeLayer} = this.state;
 
-    let onePixelInPercent = 1;
-
     return (
       <div
         className={S.workSpace}
@@ -171,31 +169,19 @@ class WorkSpaceComp extends Component {
           className={S.workSpaceInner}
           ref={this.workSpaceInner}
         >
-          {layers.map(layer => (<div
-            className={S.rectangle}
-            key={layer.id}
-            style={{
-              left: `${layer.coords.x1 < layer.coords.x2 ? layer.coords.x1 : layer.coords.x2}px`,
-              top: `${layer.coords.y1 < layer.coords.y2 ? layer.coords.y1 : layer.coords.y2}px`,
-              width: `${onePixelInPercent + layer.width}px`,
-              height: `${layer.height}px`,
-              pointerEvents: drawingIsStarted ? 'none' : 'auto'
-            }}
-          />))}
-          {
-            activeLayer ? (
-              <div
-                className={S.rectangle}
-                style={{
-                  left: `${activeLayer.coords.x1 < activeLayer.coords.x2 ? activeLayer.coords.x1 : activeLayer.coords.x2}px`,
-                  top: `${activeLayer.coords.y1 < activeLayer.coords.y2 ? activeLayer.coords.y1 : activeLayer.coords.y2}px`,
-                  width: `${onePixelInPercent + activeLayer.width}px`,
-                  height: `${activeLayer.height}px`,
-                  pointerEvents: drawingIsStarted ? 'none' : 'auto'
-                }}
-              />
-            ) : null
-          }
+          {layers.map(layer => (
+            <Layer
+              layer={layer}
+              key={layer.id}
+              drawingIsStarted={drawingIsStarted}
+            />
+          ))}
+          {activeLayer ? (
+            <Layer
+              layer={activeLayer}
+              drawingIsStarted={drawingIsStarted}
+            />
+          ) : null}
         </div>
       </div>
     )
@@ -213,8 +199,12 @@ const mapProps = state => {
 const mapActions = dispatch => {
   return {
     ...bindActionCreators(RectangleDrawingActions, dispatch),
-    showSmartGuide: coords => {dispatch(showSmartGuide(coords))},
-    hideSmartGuide: () => {dispatch(hideSmartGuide())}
+    showSmartGuide: coords => {
+      dispatch(showSmartGuide(coords))
+    },
+    hideSmartGuide: () => {
+      dispatch(hideSmartGuide())
+    }
   }
 };
 

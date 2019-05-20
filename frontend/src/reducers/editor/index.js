@@ -1,6 +1,6 @@
 import GridSettingsReducer from './girdSettings';
 import * as Actions from "../../constants/editor";
-import DrawRectangleReducer from "./drawRect";
+import LayersReducer from "./addLayer";
 
 
 const initialState = {
@@ -21,6 +21,6 @@ export default function EditorReducer(state = {}, action) {
   return {
     index: index(state.index, action),
     gridSettings: GridSettingsReducer(state.gridSettings, action),
-    drawRect: DrawRectangleReducer(state.drawRect, action)
+    drawRect: LayersReducer(state.drawRect, action)
   }
 }

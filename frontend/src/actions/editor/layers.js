@@ -1,4 +1,4 @@
-import * as Actions from '../../constants/editor/drawRect';
+import * as Actions from '../../constants/editor/layers';
 
 
 export function saveRectangleDrawing(layer) {

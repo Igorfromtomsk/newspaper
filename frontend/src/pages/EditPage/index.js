@@ -107,11 +107,11 @@ class EditPageComp extends Component {
   }
 
   turnOffRectDrawMode() {
-    this.setState({drawingModeOn: false});
+    this.setState({drawingModeOn: false, layerType: null});
   }
 
-  turnOnRectDrawMode() {
-    this.setState({drawingModeOn: true});
+  turnOnRectDrawMode(layerType) {
+    this.setState({drawingModeOn: true, layerType});
   }
 
   render() {
@@ -125,6 +125,7 @@ class EditPageComp extends Component {
           <WorkSpace
             ref={this.workPlace}
             drawingModeOn={this.state.drawingModeOn}
+            layerType={this.state.layerType}
             onClick={this.turnOffRectDrawMode.bind(this)}
           />
         </div>

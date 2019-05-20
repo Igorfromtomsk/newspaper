@@ -7,11 +7,13 @@ import {
   faEyeSlash,
   faVectorSquare,
   faUndo,
-  faRedo
+  faRedo,
+  faFont
 } from '@fortawesome/free-solid-svg-icons';
 
 
 library.add(
+  faFont,
   faTh,
   faCheck,
   faEye,

@@ -1,4 +1,4 @@
-import * as Actions from '../../constants/editor/drawRect';
+import * as Actions from '../../constants/editor/layers';
 
 
 const initState = {
@@ -6,7 +6,7 @@ const initState = {
 };
 
 
-function DrawRectangleReducer(state = initState, action) {
+function LayersReducer(state = initState, action) {
   switch (action.type) {
     case Actions.SAVE_RECTANGLE_DRAWING:
       return {
@@ -18,4 +18,4 @@ function DrawRectangleReducer(state = initState, action) {
   }
 }
 
-export default DrawRectangleReducer
+export default LayersReducer

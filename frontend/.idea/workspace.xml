@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c6e8fb2-c3cb-4540-9690-38a329ded13a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/EditPage/workSpace/layer/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/editor/gridSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/editor/gridSettings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/editor/gridSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/editor/gridSettings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/styles.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/styles.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/editor/drawRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/editor/layers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/editor/drawRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/editor/layers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fontAwesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fontAwesome.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/EditPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/styles.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/styles.module.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/userBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/userBar/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/IndexPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/IndexPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PostsPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PostsPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/editor/girdSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/editor/girdSettings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/editor/drawRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/editor/addLayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/editor/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/EditPage/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="543">
+              <caret line="127" column="43" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="43" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="n#!!block;n#keyUp#0;n#EditPageComp#0" />
@@ -44,44 +47,70 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            <state relative-caret-position="345">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/styles.module.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/layer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
+            <state relative-caret-position="435">
+              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="n#!!block;n#componentDidMount#0;n#WorkSpaceComp#0" />
+                <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#45#51#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/editor/girdSettings.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="45" column="66" lean-forward="true" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+            <state relative-caret-position="-229">
+              <caret line="141" column="17" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!block;n#constructor#0;n#WorkSpaceComp#0" />
+                <element signature="e#462#524#0" />
+                <element signature="n#!!block;n#componentDidMount#0;n#WorkSpaceComp#0" />
+                <element signature="n#!!block;n#handler#0;n#!!block;n#componentDidMount#0;n#WorkSpaceComp#0" />
+                <element signature="e#692#751#0" />
+                <element signature="n#!!block;n#getCoordinateX#0;n#WorkSpaceComp#0" />
+                <element signature="n#!!block;n#magnetizeCoordinateYToGuides#0;n#WorkSpaceComp#0" />
+                <element signature="e#1339#1732#0" />
+                <element signature="e#1543#1591#0" />
+                <element signature="e#1678#1726#0" />
+                <element signature="e#1752#2005#0" />
+                <element signature="e#1788#1951#0" />
+                <element signature="e#2011#2053#0" />
+                <element signature="n#!!block;n#magnetizeCoordinateXToGuides#0;n#WorkSpaceComp#0" />
+                <element signature="e#2213#2368#0" />
+                <element signature="e#2332#2362#0" />
+                <element signature="n#!!block;n#startDrawing#0;n#WorkSpaceComp#0" />
+                <element signature="e#2472#2776#0" />
+                <element signature="n#!!block;n#drawing#0;n#WorkSpaceComp#0" />
+                <element signature="e#5439#5550#0" />
+                <element signature="e#5450#5548#0" />
+                <element signature="e#5584#5785#0" />
+                <element signature="e#5595#5783#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -124,6 +153,9 @@
       <find>GuidComp</find>
       <find>this.props.general.title</find>
       <find>console.log</find>
+      <find>drawRect</find>
+      <find>DrawRect</find>
+      <find>turnOnRectDrawMode</find>
     </findStrings>
     <replaceStrings>
       <replace>toggleGridVisibility</replace>
@@ -143,11 +175,14 @@
       <replace>ndoRedoComp</replace>
       <replace>UndoRedo</replace>
       <replace>SmartGuidComp</replace>
+      <replace>layers</replace>
+      <replace>Layers</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/src/pages</dir>
       <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -156,10 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/_shared/button/index.js" />
-        <option value="$PROJECT_DIR$/src/constants/general.js" />
-        <option value="$PROJECT_DIR$/src/actions/generalActions.js" />
-        <option value="$PROJECT_DIR$/src/components/Footer/index.js" />
         <option value="$PROJECT_DIR$/src/index.sass" />
         <option value="$PROJECT_DIR$/src/components/_shared/checkbox/styles.module.sass" />
         <option value="$PROJECT_DIR$/src/reducers/general.js" />
@@ -175,11 +206,7 @@
         <option value="$PROJECT_DIR$/src/components/blank/blank.js" />
         <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/styles.module.sass" />
         <option value="$PROJECT_DIR$/src/_styles/styles.module.sass" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass" />
         <option value="$PROJECT_DIR$/src/pages/EditPage/stateBar/styles.module.sass" />
-        <option value="$PROJECT_DIR$/src/fontAwesome.js" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/index.js" />
-        <option value="$PROJECT_DIR$/src/actions/editor/drawRect.js" />
         <option value="$PROJECT_DIR$/src/constants/editor/drawRect.js" />
         <option value="$PROJECT_DIR$/src/_styles/bootstrap-rebuild.sass" />
         <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/index.js" />
@@ -196,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/pages/EditPage/grid/guide/styles.module.sass" />
         <option value="$PROJECT_DIR$/src/pages/EditPage/grid/guide/index.js" />
         <option value="$PROJECT_DIR$/src/pages/EditPage/grid/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/EditPage/index.js" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/pages/AboutPage/index.js" />
         <option value="$PROJECT_DIR$/src/pages/PostsPage/index.js" />
@@ -206,7 +232,16 @@
         <option value="$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/styles.module.sass" />
         <option value="$PROJECT_DIR$/src/reducers/editor/girdSettings.js" />
         <option value="$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/editor/drawRect.js" />
+        <option value="$PROJECT_DIR$/src/reducers/editor/addLayer.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/drawRectSection/index.js" />
+        <option value="$PROJECT_DIR$/src/fontAwesome.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/drawTextFieldSection/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/userBar/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass" />
         <option value="$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/EditPage/workSpace/layer/index.js" />
       </list>
     </option>
   </component>
@@ -253,12 +288,6 @@
               <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="constants" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -287,25 +316,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="EditPage" type="462c0819:PsiDirectoryNode" />
-              <item name="grid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="EditPage" type="462c0819:PsiDirectoryNode" />
-              <item name="grid" type="462c0819:PsiDirectoryNode" />
-              <item name="guide" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="EditPage" type="462c0819:PsiDirectoryNode" />
-              <item name="grid" type="462c0819:PsiDirectoryNode" />
-              <item name="smartGuide" type="462c0819:PsiDirectoryNode" />
+              <item name="userBar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -340,7 +351,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/EditPage/workSpace" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/EditPage/userBar/drawTextFieldSection" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -354,15 +365,15 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/EditPage/userBar/drawTextFieldSection" />
       <recent name="$PROJECT_DIR$/src/pages/EditPage/workSpace" />
       <recent name="$PROJECT_DIR$/src/pages/EditPage/userBar" />
       <recent name="$PROJECT_DIR$/src/pages/EditPage/stateBar" />
       <recent name="$PROJECT_DIR$/src/pages/about" />
-      <recent name="$PROJECT_DIR$/src/pages/users" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -396,7 +407,10 @@
       <workItem from="1556520385056" duration="739000" />
       <workItem from="1556523368774" duration="1722000" />
       <workItem from="1556532421017" duration="1353000" />
-      <workItem from="1557113147483" duration="2844000" />
+      <workItem from="1557113147483" duration="4696000" />
+      <workItem from="1557718245113" duration="112000" />
+      <workItem from="1557719857838" duration="1964000" />
+      <workItem from="1558323677028" duration="5259000" />
     </task>
     <task id="LOCAL-00001" summary="react added&#10;routes added&#10;some features made">
       <created>1554276489722</created>
@@ -454,11 +468,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556532453874</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="some smart guides functional">
+      <created>1557116015305</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1557116015305</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95605000" />
+    <option name="totallyTimeSpent" value="104792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1110" extended-state="6" />
@@ -479,6 +500,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32838774" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002636" side_tool="true" weight="0.32903865" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49973643" visible="true" weight="0.32804757" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32903865" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -539,23 +561,10 @@
     <MESSAGE value="drawing works fine" />
     <MESSAGE value="undo-redo&#10;smart guides&#10;grid guides" />
     <MESSAGE value="everything is fine&#10;smartGuides added" />
-    <option name="LAST_COMMIT_MESSAGE" value="everything is fine&#10;smartGuides added" />
+    <MESSAGE value="some smart guides functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="some smart guides functional" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/general.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="39" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/general.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -590,20 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/generalActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/styles.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/blank/styles.module.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -635,20 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/styles.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/EditPage/stateBar/styles.module.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -664,47 +645,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fontAwesome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/editor/drawRect.js">
+    <entry file="file://$PROJECT_DIR$/src/constants/editor/layers.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/_styles/bootstrap-rebuild.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/drawRect/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/editor/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -715,13 +662,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/editor/drawRect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -858,20 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/editor/drawRect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/editor/gridSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/guide/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -882,23 +808,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/styles.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/editor/girdSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="45" column="66" lean-forward="true" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="300">
           <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -906,10 +818,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/grid/smartGuide/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/editor/girdSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="66" lean-forward="true" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/editor/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/editor/gridSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/generalActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/editor/addLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/drawRectSection/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fontAwesome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/editor/layers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/drawTextFieldSection/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/drawRectSection/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/styles.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/EditPage/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="543">
+          <caret line="127" column="43" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="43" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="n#!!block;n#keyUp#0;n#EditPageComp#0" />
@@ -918,13 +930,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/userBar/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
+        <state relative-caret-position="345">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-229">
+          <caret line="141" column="17" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#WorkSpaceComp#0" />
+            <element signature="e#462#524#0" />
             <element signature="n#!!block;n#componentDidMount#0;n#WorkSpaceComp#0" />
+            <element signature="n#!!block;n#handler#0;n#!!block;n#componentDidMount#0;n#WorkSpaceComp#0" />
+            <element signature="e#692#751#0" />
+            <element signature="n#!!block;n#getCoordinateX#0;n#WorkSpaceComp#0" />
+            <element signature="n#!!block;n#magnetizeCoordinateYToGuides#0;n#WorkSpaceComp#0" />
+            <element signature="e#1339#1732#0" />
+            <element signature="e#1543#1591#0" />
+            <element signature="e#1678#1726#0" />
+            <element signature="e#1752#2005#0" />
+            <element signature="e#1788#1951#0" />
+            <element signature="e#2011#2053#0" />
+            <element signature="n#!!block;n#magnetizeCoordinateXToGuides#0;n#WorkSpaceComp#0" />
+            <element signature="e#2213#2368#0" />
+            <element signature="e#2332#2362#0" />
+            <element signature="n#!!block;n#startDrawing#0;n#WorkSpaceComp#0" />
+            <element signature="e#2472#2776#0" />
+            <element signature="n#!!block;n#drawing#0;n#WorkSpaceComp#0" />
+            <element signature="e#5439#5550#0" />
+            <element signature="e#5450#5548#0" />
+            <element signature="e#5584#5785#0" />
+            <element signature="e#5595#5783#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/EditPage/workSpace/layer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#45#51#1" expanded="true" />
           </folding>
         </state>
       </provider>
