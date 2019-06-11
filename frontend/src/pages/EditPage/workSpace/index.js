@@ -14,7 +14,8 @@ class WorkSpaceComp extends Component {
     this.workSpaceInner = React.createRef();
     this.state = {
       drawingIsStarted: false,
-      activeLayer: null
+      activeLayer: null,
+      newLayerId: null
     };
   }
 
@@ -112,6 +113,7 @@ class WorkSpaceComp extends Component {
           x2: 0,
           y2: 0
         },
+        data: '',
         type: layerType,
         width: 0,
         height: 0
@@ -144,13 +146,18 @@ class WorkSpaceComp extends Component {
     this.props.hideSmartGuide();
     this.setState({
       drawingIsStarted: false,
-      activeLayer: null
+      activeLayer: null,
+      newLayerId: this.state.activeLayer.id
     });
+  }
+
+  stopEditingNewLayer() {
+    this.setState({newLayerId: null});
   }
 
   render() {
     const {drawingModeOn, layers, leftPadding, rightPadding} = this.props;
-    const {drawingIsStarted, activeLayer} = this.state;
+    const {drawingIsStarted, activeLayer, newLayerId} = this.state;
 
     return (
       <div
@@ -173,6 +180,9 @@ class WorkSpaceComp extends Component {
             <Layer
               layer={layer}
               key={layer.id}
+              updateLayer={this.props.updateLayer}
+              newLayerId={newLayerId}
+              stopEditingNewLayer={this.stopEditingNewLayer.bind(this)}
               drawingIsStarted={drawingIsStarted}
             />
           ))}
@@ -180,6 +190,7 @@ class WorkSpaceComp extends Component {
             <Layer
               layer={activeLayer}
               drawingIsStarted={drawingIsStarted}
+              newLayer={true}
             />
           ) : null}
         </div>

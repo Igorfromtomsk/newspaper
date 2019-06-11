@@ -4,6 +4,9 @@ import './index.sass';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import library from './fontAwesome';
+import {checkNewDocumentStylesUpdate} from './utils/newDocumentStyles';
+
+checkNewDocumentStylesUpdate();
 
 library.add();
 

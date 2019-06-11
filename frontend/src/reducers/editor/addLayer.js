@@ -13,6 +13,12 @@ function LayersReducer(state = initState, action) {
         ...state,
         layers: [...state.layers, action.payload]
       };
+    case Actions.UPDATE_LAYER:
+      let layers = state.layers;
+
+      state.layers.filter(layer => layer.id === action.payload.id)[0].data = action.payload.data;
+
+      return { ...state, layers};
     default:
       return state;
   }

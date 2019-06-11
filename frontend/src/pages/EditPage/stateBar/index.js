@@ -36,7 +36,7 @@ class StateBarComp extends Component {
 
 const mapProps = state => {
   return {
-    ...state.EditorReducer.index
+    ...state.EditorReducer.present.index
   }
 };
 

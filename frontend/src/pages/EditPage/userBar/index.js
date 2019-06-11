@@ -44,11 +44,11 @@ class UserBarComp extends Component {
 
 const mapProps = state => {
   return {
-    ...state.EditorReducer.index
+    ...state.EditorReducer.present.index
   }
 };
 
-const mapActions = dispatch => {
+const mapActions = () => {
   return {}
 };
 

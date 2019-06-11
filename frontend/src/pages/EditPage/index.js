@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 import {showFooter, hideFooter} from "../../actions/generalActions";
 import {resize, changeLeftPadding, changeRightPadding} from "../../actions/editor/gridSettings";
-import {undo} from '../../actions/editor';
+import {undo, redo} from '../../actions/editor';
 
 
 import UserBar from './userBar';
@@ -23,7 +23,8 @@ class EditPageComp extends Component {
     this.workPlace = React.createRef();
 
     this.state = {
-      hold: null
+      hold: null,
+      additionalHold: null
     }
   }
 
@@ -37,35 +38,77 @@ class EditPageComp extends Component {
   }
 
   keyUp(event) {
-    switch(event.keyCode) {
-      case 17:
-        this.setState({hold: null});
-        break;
-
-      default:
-        break;
-    }
+    this.setState({hold: null, additionalHold: null});
   }
 
   keyDown(event) {
-    console.log('//keyCode: ', event.keyCode)
+    console.log('//keyCode: ', event.keyCode);
+    let {hold, additionalHold} = this.state;
     switch (event.keyCode) {
       case 27:
         this.turnOffRectDrawMode();
         break;
 
       case 17:
-        this.setState({hold: 17})
+        if (hold) {
+          this.setState({additionalHold: 17});
+        } else {
+          this.setState({hold: 17});
+        }
+
+        break;
+
+      case 18:
+
+        if (hold) {
+          this.setState({additionalHold: 18});
+        } else {
+          this.setState({hold: 18});
+        }
         break;
 
       default:
         break;
     }
 
-    if (this.state.hold) {
-      switch (this.state.hold) {
+    if (hold && !additionalHold) {
+      switch (hold) {
         case 17:
           this.ctrlActions(event);
+          break;
+
+        case 18:
+          this.altActions(event);
+          break;
+
+        default:
+          break;
+      }
+    }
+
+    if (hold && additionalHold) {
+      switch (hold) {
+        case 17:
+          switch (additionalHold) {
+            case 18:
+              this.altCtrlActions(event);
+              break;
+
+            default:
+              break;
+          }
+
+          break;
+
+        case 18:
+          switch (additionalHold) {
+            case 17:
+              this.altCtrlActions(event);
+              break;
+
+            default:
+              break;
+          }
           break;
 
         default:
@@ -80,9 +123,32 @@ class EditPageComp extends Component {
         this.props.undo();
         break;
 
+      default:
+        break;
+    }
+  }
+
+  altActions(event) {
+    switch (event.keyCode) {
+      case 84:
+        event.preventDefault();
+        this.turnOnRectDrawMode('text');
+        break;
+
       case 82:
         event.preventDefault();
-        this.turnOnRectDrawMode();
+        this.turnOnRectDrawMode('rectangle');
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  altCtrlActions(event) {
+    switch (event.keyCode) {
+      case 90:
+        this.props.redo();
         break;
 
       default:
@@ -151,7 +217,8 @@ const mapActions = dispatch => {
     resize: (width) => {dispatch(resize(width))},
     changeLeftPadding: leftPadding => {dispatch(changeLeftPadding(leftPadding))},
     changeRightPadding: rightPadding => {dispatch(changeRightPadding(rightPadding))},
-    undo: () => {dispatch(undo())}
+    undo: () => {dispatch(undo())},
+    redo: () => {dispatch(redo())}
   }
 };
 
